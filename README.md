@@ -57,4 +57,13 @@ print(protien_record.id)
 print(protien_record.name)
 print(protien_record.description)
 
+# Fasta file
+from Bio import SeqIO
+
+record = SeqIO.read("cox1.fasta", "fasta")
+
+print(record.id)
+print(record.seq)
+print(len(record.seq))
+
 
