@@ -67,3 +67,23 @@ print(record.seq)
 print(len(record.seq))
 
 
+
+# Genebank
+from Bio import SeqIO
+
+record = SeqIO.read("sequence.gb", "genbank")
+
+print(record.id)
+print(record.description)
+print(record.annotations)
+
+print(len(record.features))
+
+
+for feature in record.feature:
+    print(feature.type , feature.location)
+
+
+
+
+
